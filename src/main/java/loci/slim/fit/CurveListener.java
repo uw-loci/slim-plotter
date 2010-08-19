@@ -1,5 +1,5 @@
 //
-// CurveReporter.java
+// CurveListener.java
 //
 
 /*
@@ -25,16 +25,14 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 package loci.slim.fit;
 
 /**
- * CurveReporter is the interface for reporting curve events to listeners.
+ * CurveListener is the interface for being notified of curve events.
  *
  * <dl><dt><b>Source code:</b></dt>
- * <dd><a href="http://dev.loci.wisc.edu/trac/java/browser/trunk/components/slim-plotter/src/loci/slim/fit/CurveReporter.java">Trac</a>,
- * <a href="http://dev.loci.wisc.edu/svn/java/trunk/components/slim-plotter/src/loci/slim/fit/CurveReporter.java">SVN</a></dd></dl>
+ * <dd><a href="https://skyking.microscopy.wisc.edu/trac/java/browser/trunk/components/slim-plotter/src/loci/slim/fit/CurveListener.java">Trac</a>,
+ * <a href="https://skyking.microscopy.wisc.edu/svn/java/trunk/components/slim-plotter/src/loci/slim/fit/CurveListener.java">SVN</a></dd></dl>
  */
-public interface CurveReporter {
+public interface CurveListener {
 
-  void addCurveListener(CurveListener l);
-  void removeCurveListener(CurveListener l);
-  void fireCurveEvent(CurveEvent e);
+  void curveChanged(CurveEvent e);
 
 }

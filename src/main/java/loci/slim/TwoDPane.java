@@ -90,8 +90,8 @@ import visad.util.Util;
  * SLIM Plotter's 2D image pane.
  *
  * <dl><dt><b>Source code:</b></dt>
- * <dd><a href="http://dev.loci.wisc.edu/trac/java/browser/trunk/components/slim-plotter/src/loci/slim/TwoDPane.java">Trac</a>,
- * <a href="http://dev.loci.wisc.edu/svn/java/trunk/components/slim-plotter/src/loci/slim/TwoDPane.java">SVN</a></dd></dl>
+ * <dd><a href="https://skyking.microscopy.wisc.edu/trac/java/browser/trunk/components/slim-plotter/src/loci/slim/TwoDPane.java">Trac</a>,
+ * <a href="https://skyking.microscopy.wisc.edu/svn/java/trunk/components/slim-plotter/src/loci/slim/TwoDPane.java">SVN</a></dd></dl>
  *
  * @author Curtis Rueden ctrueden at wisc.edu
  */
@@ -207,7 +207,7 @@ public class TwoDPane extends JPanel
       }
     }
     final DataReferenceImpl curveRef = new DataReferenceImpl("curve");
-    //RealTupleType xy = new RealTupleType(types.xType, types.yType);
+    RealTupleType xy = new RealTupleType(types.xType, types.yType);
     UnionSet dummyCurve = new UnionSet(new Gridded2DSet[] {
       new Gridded2DSet(types.xy, new float[][] {{0}, {0}}, 1)
     });
@@ -720,12 +720,12 @@ public class TwoDPane extends JPanel
 
   private void doSpectralProjection() {
     // TODO
-    // http://dev.loci.wisc.edu/trac/java/ticket/86
+    // https://skyking.microscopy.wisc.edu/trac/java/ticket/86
   }
 
   private void doEmissionSpectrum() {
     // TODO
-    // http://dev.loci.wisc.edu/trac/java/ticket/164
+    // https://skyking.microscopy.wisc.edu/trac/java/ticket/164
   }
 
   private void doProgressString() {
