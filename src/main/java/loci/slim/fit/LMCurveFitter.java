@@ -26,7 +26,6 @@ package loci.slim.fit;
 
 import jaolho.data.lma.LMA;
 import jaolho.data.lma.LMAFunction;
-import jaolho.data.lma.implementations.JAMAMatrix;
 
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -47,11 +46,6 @@ public class LMCurveFitter extends CurveFitter {
 
   protected static final ExpFunction[] EXP_FUNCTIONS = {
     new ExpFunction(1), new ExpFunction(2)
-  };
-
-  protected static final JAMAMatrix[] EXP_MATRICES = {
-    new JAMAMatrix(3, 3),
-    new JAMAMatrix(5, 5)
   };
 
   // cached to save memory
@@ -125,8 +119,7 @@ public class LMCurveFitter extends CurveFitter {
     params[2 * components] = curveEstimate[0][2];
 
     lma = new LMA(EXP_FUNCTIONS[components - 1], params,
-      new double[][] {xVals, yVals}, weights,
-      EXP_MATRICES[components - 1]);
+      new double[][] {xVals, yVals}, weights);
     lma.maxIterations = 1;
   }
 
