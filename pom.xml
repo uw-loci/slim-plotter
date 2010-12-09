@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
     http://maven.apache.org/maven-v4_0_0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>loci</groupId>
     <artifactId>loci-base-pom</artifactId>
@@ -12,8 +13,8 @@
 
   <groupId>loci</groupId>
   <artifactId>slim-plotter</artifactId>
-  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+
   <name>SLIM Plotter</name>
   <description>A multi-purpose biological analysis tool.</description>
   <url>http://loci.wisc.edu/software/slim-plotter</url>
@@ -28,7 +29,11 @@
   </licenses>
 
   <dependencies>
-    <!-- loci -->
+    <dependency>
+      <groupId>jaolho.data</groupId>
+      <artifactId>lma</artifactId>
+      <version>1.3</version>
+    </dependency>
     <dependency>
       <groupId>loci</groupId>
       <artifactId>bio-formats</artifactId>
@@ -43,13 +48,6 @@
       <groupId>loci</groupId>
       <artifactId>visbio</artifactId>
       <version>3.40-SNAPSHOT</version>
-    </dependency>
-
-    <!-- 3rd party -->
-    <dependency>
-      <groupId>jaolho.data</groupId>
-      <artifactId>lma</artifactId>
-      <version>1.3</version>
     </dependency>
     <dependency>
       <groupId>visad</groupId>
