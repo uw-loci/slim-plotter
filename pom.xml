@@ -2,18 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-    http://maven.apache.org/maven-v4_0_0.xsd">
+    http://maven.apache.org/xsd/maven-v4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>loci</groupId>
-    <artifactId>loci-base-pom</artifactId>
-    <version>1.06</version>
+    <artifactId>loci-base</artifactId>
+    <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>loci</groupId>
   <artifactId>slim-plotter</artifactId>
-  <version>1.0-SNAPSHOT</version>
 
   <name>SLIM Plotter</name>
   <description>A multi-purpose biological analysis tool.</description>
@@ -30,24 +28,24 @@
 
   <dependencies>
     <dependency>
+      <groupId>${bio-formats.groupId}</groupId>
+      <artifactId>bio-formats</artifactId>
+      <version>${bio-formats.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${bio-formats.groupId}</groupId>
+      <artifactId>loci-common</artifactId>
+      <version>${bio-formats.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>visbio</artifactId>
+      <version>3.40-SNAPSHOT</version>
+    </dependency>
+    <dependency>
       <groupId>jaolho.data</groupId>
       <artifactId>lma</artifactId>
       <version>1.3</version>
-    </dependency>
-    <dependency>
-      <groupId>loci</groupId>
-      <artifactId>bio-formats</artifactId>
-      <version>5.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>loci</groupId>
-      <artifactId>loci-common</artifactId>
-      <version>5.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>loci</groupId>
-      <artifactId>visbio</artifactId>
-      <version>3.40-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>visad</groupId>
@@ -91,11 +89,15 @@
     </developer>
   </developers>
 
+  <!-- NB: for loci-base, in case of partial checkout -->
   <repositories>
-    <!-- NB: for loci-base-pom -->
     <repository>
       <id>loci.releases</id>
       <url>http://dev.loci.wisc.edu:8081/content/repositories/releases</url>
+    </repository>
+    <repository>
+      <id>loci.snapshots</id>
+      <url>http://dev.loci.wisc.edu:8081/content/repositories/snapshots</url>
     </repository>
   </repositories>
 
