@@ -90,8 +90,8 @@ import visad.util.Util;
  * SLIM Plotter's 2D image pane.
  *
  * <dl><dt><b>Source code:</b></dt>
- * <dd><a href="https://skyking.microscopy.wisc.edu/trac/java/browser/trunk/components/slim-plotter/src/loci/slim/TwoDPane.java">Trac</a>,
- * <a href="https://skyking.microscopy.wisc.edu/svn/java/trunk/components/slim-plotter/src/loci/slim/TwoDPane.java">SVN</a></dd></dl>
+ * <dd><a href="http://dev.loci.wisc.edu/trac/software/browser/trunk/projects/slim-plotter/src/main/java/loci/slim/TwoDPane.java">Trac</a>,
+ * <a href="http://dev.loci.wisc.edu/svn/software/trunk/projects/slim-plotter/src/main/java/loci/slim/TwoDPane.java">SVN</a></dd></dl>
  *
  * @author Curtis Rueden ctrueden at wisc.edu
  */

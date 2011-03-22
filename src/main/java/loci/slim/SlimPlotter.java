@@ -1,3 +1,4 @@
+//
 // SlimPlotter.java
 //
 
@@ -110,8 +111,8 @@ import visad.java3d.TwoDDisplayRendererJ3D;
  * A tool for visualization of spectral lifetime data.
  *
  * <dl><dt><b>Source code:</b></dt>
- * <dd><a href="https://skyking.microscopy.wisc.edu/trac/java/browser/trunk/components/slim-plotter/src/loci/slim/SlimPlotter.java">Trac</a>,
- * <a href="https://skyking.microscopy.wisc.edu/svn/java/trunk/components/slim-plotter/src/loci/slim/SlimPlotter.java">SVN</a></dd></dl>
+ * <dd><a href="http://dev.loci.wisc.edu/trac/software/browser/trunk/projects/slim-plotter/src/main/java/loci/slim/SlimPlotter.java">Trac</a>,
+ * <a href="http://dev.loci.wisc.edu/svn/software/trunk/projects/slim-plotter/src/main/java/loci/slim/SlimPlotter.java">SVN</a></dd></dl>
  *
  * @author Curtis Rueden ctrueden at wisc.edu
  */
