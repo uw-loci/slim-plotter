@@ -8,10 +8,11 @@
   <parent>
     <groupId>loci</groupId>
     <artifactId>pom-loci</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
   </parent>
 
   <artifactId>slim-plotter</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
 
   <name>SLIM Plotter</name>
   <description>A multi-purpose biological analysis tool.</description>
