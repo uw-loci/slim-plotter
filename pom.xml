@@ -87,6 +87,18 @@
 		</developer>
 	</developers>
 
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/uw-loci/slim-plotter/issues</url>
+	</issueManagement>
+
+	<scm>
+		<connection>scm:git:git://github.com/uw-loci/slim-plotter</connection>
+		<developerConnection>scm:git:git@github.com:uw-loci/slim-plotter</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/uw-loci/slim-plotter</url>
+	</scm>
+
 	<!-- NB: for project parent, in case of partial checkout -->
 	<repositories>
 		<repository>
