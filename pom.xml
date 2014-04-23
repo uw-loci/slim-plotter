@@ -30,20 +30,19 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>${bio-formats.groupId}</groupId>
-			<artifactId>bio-formats</artifactId>
-			<version>${bio-formats.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${bio-formats.groupId}</groupId>
-			<artifactId>loci-common</artifactId>
-			<version>${bio-formats.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>loci</groupId>
 			<artifactId>visbio</artifactId>
 			<version>3.40-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>ome</groupId>
+			<artifactId>formats-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ome</groupId>
+			<artifactId>formats-common</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>jaolho.data</groupId>
 			<artifactId>lma</artifactId>
