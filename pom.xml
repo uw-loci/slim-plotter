@@ -6,41 +6,116 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>loci</groupId>
-		<artifactId>pom-loci</artifactId>
-		<version>1.21</version>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>14.0.0</version>
 		<relativePath />
 	</parent>
 
+	<groupId>loci</groupId>
 	<artifactId>slim-plotter</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
 	<name>SLIM Plotter</name>
 	<description>An application and curve fitting library for combined spectral lifetime visualization and analysis.</description>
-	<url>http://loci.wisc.edu/software/slim-plotter</url>
+	<url>https://loci.wisc.edu/software/slim-plotter</url>
 	<inceptionYear>2006</inceptionYear>
-
+	<organization>
+		<name>LOCI</name>
+		<url>https://loci.wisc.edu/</url>
+	</organization>
 	<licenses>
 		<license>
 			<name>GNU General Public License v2+</name>
-			<url>http://www.gnu.org/licenses/gpl-2.0.txt</url>
+			<url>https://www.gnu.org/licenses/gpl-2.0.txt</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<developers>
+		<developer>
+			<id>ctrueden</id>
+			<name>Curtis Rueden</name>
+			<url>https://imagej.net/User:Rueden</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>reviewer</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Eric Kjellman</name>
+		</contributor>
+		<contributor>
+			<name>Melissa Linkert</name>
+			<url>http://imagej.net/User:Linkert</url>
+			<properties><id>melissalinkert</id></properties>
+		</contributor>
+		<contributor>
+			<name>Gunnsteinn Hall</name>
+			<properties><id>gunnsth</id></properties>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>LOCI Software</name>
+			<subscribe>https://loci.wisc.edu/mailman/listinfo/loci-software</subscribe>
+			<unsubscribe>https://loci.wisc.edu/mailman/listinfo/loci-software</unsubscribe>
+			<post>loci-software@loci.wisc.edu</post>
+			<archive>https://loci.wisc.edu/pipermail/loci-software/</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/uw-loci/slim-plotter</connection>
+		<developerConnection>scm:git:git@github.com:uw-loci/slim-plotter</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/uw-loci/slim-plotter</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/uw-loci/slim-plotter/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/uw-loci/slim-plotter</url>
+	</ciManagement>
+
+	<properties>
+		<main-class>loci.slim.SlimPlotter</main-class>
+		<package-name>loci.slim</package-name>
+		<license.licenseName>gpl_v2</license.licenseName>
+		<license.copyrightOwners>Board of Regents of the University of
+Wisconsin-Madison.</license.copyrightOwners>
+		<license.projectName>SLIM Plotter application and curve fitting library for
+combined spectral lifetime visualization and analysis.</license.projectName>
+	</properties>
+
+	<repositories>
+		<!-- NB: for project parent -->
+		<repository>
+			<id>imagej.public</id>
+			<url>https://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
 			<groupId>loci</groupId>
 			<artifactId>visbio</artifactId>
-			<version>3.40-SNAPSHOT</version>
+			<version>4.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>ome</groupId>
 			<artifactId>formats-api</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>ome</groupId>
-			<artifactId>formats-common</artifactId>
+			<groupId>org.openmicroscopy</groupId>
+			<artifactId>ome-common</artifactId>
 		</dependency>
 
 		<dependency>
@@ -54,70 +129,4 @@
 			<version>2.0.20070828</version>
 		</dependency>
 	</dependencies>
-
-	<properties>
-		<enforcer.skip>true</enforcer.skip>
-	</properties>
-
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>loci.slim.SlimPlotter</mainClass>
-							<packageName>loci.slim</packageName>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>license-maven-plugin</artifactId>
-				<configuration>
-					<licenseName>gpl_v2</licenseName>
-					<projectName>SLIM Plotter application and curve fitting library for
-combined spectral lifetime visualization and analysis.</projectName>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<developers>
-		<developer>
-			<id>ctrueden</id>
-			<name>Curtis Rueden</name>
-			<email>ctrueden@wisc.edu</email>
-			<url>http://loci.wisc.edu/people/curtis-rueden</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-	</developers>
-
-	<issueManagement>
-		<system>GitHub Issues</system>
-		<url>https://github.com/uw-loci/slim-plotter/issues</url>
-	</issueManagement>
-
-	<scm>
-		<connection>scm:git:git://github.com/uw-loci/slim-plotter</connection>
-		<developerConnection>scm:git:git@github.com:uw-loci/slim-plotter</developerConnection>
-		<tag>HEAD</tag>
-		<url>https://github.com/uw-loci/slim-plotter</url>
-	</scm>
-
-	<repositories>
-		<!-- NB: for project parent -->
-		<repository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-		</repository>
-	</repositories>
-
 </project>

@@ -51,6 +51,7 @@ import loci.formats.ChannelSeparator;
 import loci.formats.FormatException;
 import loci.formats.FormatTools;
 import loci.formats.IFormatReader;
+import loci.formats.Modulo;
 import loci.slim.fit.CurveCollection;
 import loci.slim.fit.CurveEvent;
 import loci.slim.fit.CurveListener;
@@ -124,8 +125,8 @@ public class SlimData implements ActionListener, CurveListener {
     reader.setId(id);
     width = reader.getSizeX();
     height = reader.getSizeY();
-    int[] cLengths = reader.getChannelDimLengths();
-    String[] cTypes = reader.getChannelDimTypes();
+    int[] cLengths = getChannelDimLengths(reader);
+    String[] cTypes = getChannelDimTypes(reader);
     timeBins = channels = 1;
     int lifetimeIndex = -1, spectraIndex = -1;
     for (int i=0; i<cTypes.length; i++) {
@@ -419,4 +420,22 @@ public class SlimData implements ActionListener, CurveListener {
     paramDialog.setVisible(true);
   }
 
+	private int[] getChannelDimLengths(final IFormatReader r) {
+		final Modulo moduloC = r.getModuloC();
+		if (moduloC != null && moduloC.length() > 1) {
+			return new int[] { //
+				r.getSizeC() / moduloC.length(), //
+				moduloC.length() //
+			};
+		}
+		return new int[] { r.getSizeC() };
+	}
+
+	private String[] getChannelDimTypes(final IFormatReader r) {
+		final Modulo moduloC = r.getModuloC();
+		if (moduloC != null && moduloC.length() > 1) {
+			return new String[] { moduloC.parentType, moduloC.type };
+		}
+		return new String[] { FormatTools.CHANNEL };
+	}
 }
