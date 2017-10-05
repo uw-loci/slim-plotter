@@ -93,6 +93,9 @@
 Wisconsin-Madison.</license.copyrightOwners>
 		<license.projectName>SLIM Plotter application and curve fitting library for
 combined spectral lifetime visualization and analysis.</license.projectName>
+
+		<!-- NB: Deploy releases to the ImageJ Maven repository. -->
+		<releaseProfiles>deploy-to-imagej</releaseProfiles>
 	</properties>
 
 	<repositories>
